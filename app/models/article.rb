@@ -73,7 +73,7 @@ class Article < Content
   
   def merge_with(article_id)
     article = Article.find_by_id(article_id)
-    self.body_and_extended = "#{self.body_and_extended} #{article.body}"
+    self.body_and_extended = "#{self.body_and_extended} #{article.body_and_extended}"
     self.save!
   end
 

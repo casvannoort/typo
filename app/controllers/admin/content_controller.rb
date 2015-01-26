@@ -7,7 +7,9 @@ class Admin::ContentController < Admin::BaseController
   cache_sweeper :blog_sweeper
 
   def merge
-    article = Article.find(params[:id])
+#    @params = params
+#    @articles = Article.all
+    article = Article.find_by_id(params[:id])
     article.merge_with(params[:merge_with])
     redirect_to "/admin/content/edit/#{article.id}"
   end

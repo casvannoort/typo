@@ -6,8 +6,7 @@ Feature: Write Articles as non-logged in dude
     Given the blog is set up
     And the following articles exist
     | id | title    | body         |
-    | 1  | Foobar   | LoremIpsum   |
-    | 2  | Foobar 2 | LoremIpsum 2 |
+    | 3  | Foobar   | LoremIpsum   |
 
   Scenario: A non-admin cannot merge articles
   Given I am on the article page for "Foobar"
